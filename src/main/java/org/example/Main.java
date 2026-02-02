@@ -1,14 +1,14 @@
 package org.example;
 
 
-import java.util.Arrays;
+
 import java.util.Scanner;
 
 public class Main {
     static  String[] board;
     static String turn;
 
-    static void main() {
+    public static void main(String[] args) {
         var scanner = new Scanner(System.in);
         board = new String[9];
         turn = "";
@@ -56,6 +56,8 @@ public class Main {
                 break;
             }
         }
+
+        scanner.close();
 
     }
 
@@ -109,8 +111,14 @@ public class Main {
             }
         }
 
-        for (int i = 0; i < 9; i++) {
-            if (Arrays.asList("1","2","3","4","5","6","7","8","9").contains(board[i])) {
+//        for (int i = 0; i < 9; i++) {
+//            if (Arrays.asList("1","2","3","4","5","6","7","8","9").contains(board[i])) {
+//                return null;
+//            }
+//        }
+
+        for(int i = 0 ; i < 9 ; i++){
+            if(!board[i].equals("X") && !board[i].equals("O")){
                 return null;
             }
         }
