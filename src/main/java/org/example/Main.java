@@ -1,9 +1,7 @@
 package org.example;
 
-import jdk.dynalink.beans.StaticClass;
 
 import java.util.Arrays;
-import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
@@ -14,7 +12,7 @@ public class Main {
         var scanner = new Scanner(System.in);
         board = new String[9];
         turn = "";
-        String winner = null;
+        String winner;
 
 
         for (int a = 0; a < 9; a++) {
